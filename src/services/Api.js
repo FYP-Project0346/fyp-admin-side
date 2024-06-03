@@ -3,6 +3,7 @@ const GET_ALL_THE_USERS = `${BASE_URL}/user/get-all-users`;
 const ADD_ADMIN = `${BASE_URL}/admin/register`
 const GET_ALL_ADMINS = `${BASE_URL}/admin/get-all-admins`
 const DELETE_USERS_API = `${BASE_URL}/user/delete-user`
+const LOGIN_USER_API = `${BASE_URL}/admin/login`
 
 
 // Sites
@@ -29,4 +30,5 @@ export {
     GET_PRODUCT_BY_ID,
     DELETE_PRODUCT_API,
     DELETE_USERS_API,
+    LOGIN_USER_API,
 }

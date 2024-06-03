@@ -24,9 +24,9 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>  
-        <Route path='/' element={<Dashboard/>}/>
+        <Route path='/dashboard' element={<Dashboard/>}/>
         <Route path='/users' element={<UserList/>}/>
-        <Route path='/login' element={<LoginAdmin/>}/>
+        <Route path='/' element={<LoginAdmin/>}/>
         <Route path='/add-admin' element={<RegisterAdmin/>}/>
         <Route path='/admins' element={<Admin/>}/>
         <Route path='/add-site' element={<AddSite/>}/>

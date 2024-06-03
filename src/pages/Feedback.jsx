@@ -28,6 +28,40 @@ function Feedback() {
     
   };
 
+
+
+  return (
+    <div className='d-flex'>
+    <Sidebar/>
+    <div style={{margin: "30px", marginLeft: "60px"}}>
+    <h1>Feedbacks</h1>
+
+    <div>
+    {Feedback.map(user => (            
+              <div style={{
+                backgroundColor: "white",
+                margin: "20px",
+                boxShadow: "0px 0px 20px gray",
+                padding: "20px",
+                width: "1150px"
+              }}>
+              <b>Customer Id: </b>{user.cus_id} <br/>
+              <b>Email:</b> {user.email} <br/>
+              <b>Title:</b> {user.message} <br/>
+              <b>Message:</b> {user.message} <br/>
+              <div className='d-flex justify-content-end'>
+              <button className="delete-button" onClick={() => handleDelete(user._id)}>Delete</button> <br/>
+              </div>
+              </div>
+          ))}
+    </div>
+
+
+    </div>
+    
+    </div>
+  )
+
   return (
     <div style={{display: "flex"}}>
     <Sidebar selectedItem={"Feedback"}/>

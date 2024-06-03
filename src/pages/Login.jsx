@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { loginAdmin } from '../services/server';
+import { useNavigate } from 'react-router-dom';
 
 function LoginAdmin() {
+  const navigate = useNavigate();
   const [loginData, setLoginData] = useState({
     email: '',
     password: ''
@@ -11,7 +14,7 @@ function LoginAdmin() {
     setLoginData({ ...loginData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const { email, password } = loginData;
 
@@ -21,7 +24,12 @@ function LoginAdmin() {
       return;
     }
 
-    console.log('Login Data:', loginData);
+    const status = await loginAdmin(email, password);
+    if(status){
+      navigate("/dashboard")
+    }else{
+      alert("Wrong Email or Password")
+    }
   };
 
   return (

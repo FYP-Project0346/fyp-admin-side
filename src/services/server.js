@@ -4,6 +4,7 @@ import {
     GET_ALL_THE_USERS,
     ADD_ADMIN,
     DELETE_USERS_API,
+    LOGIN_USER_API,
 } from "./Api"
 
 const getUsers = async () => {
@@ -32,6 +33,19 @@ const deleteUser = async (id) => {
 }
 
 
+const loginAdmin = async (email, password)=>{
+    try{
+        const response = await axios.post(LOGIN_USER_API, {
+            username: email,
+            password
+        })
+        return response.data.code === 200;
+    }catch(e){
+        return false
+    }
+}
+
+
 
 
 
@@ -40,4 +54,5 @@ export {
     addAdmin,
     getAllAdmins,
     deleteUser,
+    loginAdmin,
 }

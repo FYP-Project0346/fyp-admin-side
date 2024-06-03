@@ -38,6 +38,21 @@ function Product() {
     return null
   }
 
+  function Description(text) {
+    console.log(text)
+    const formattedText = text.split('////n////').map((item, index) => {
+      console.log(`item ----> ${item}`)
+      return (
+        <React.Fragment key={index}>
+          {item}
+          <br />
+        </React.Fragment>
+      )
+    })
+
+    return <div>{formattedText}</div>
+  }
+
   return (
     <div className='container-fluid py-5'>
       <div className='row px-xl-5'>
@@ -47,7 +62,9 @@ function Product() {
             className='carousel slide'
             data-ride='carousel'
           >
-            <div className='carousel-inner border'>
+            <div className='carousel-inner border' style={{
+              boxShadow: "0px 0px 30px gray"
+            }}>
               <img
                 className='product-image'
                 src={data.images[0]}
@@ -129,9 +146,10 @@ function Product() {
         <p
           style={{
             color: '#082137',
+            textAlign: "start"
           }}
         >
-          {data.desc}
+          {Description(data.desc)}
         </p>
       </div>
     </div>

@@ -20,7 +20,7 @@ const Sidebar = ({selectedItem}) => {
             <ul className="nav flex-column">
                 <li className="nav-item mb-3">
                     <Link 
-                        to="/" 
+                        to="/dashboard" 
                         className={`nav-link d-flex align-items-center ${selectedItem === 'Dashboard' ? 'bg-white text-dark' : 'text-white'}`}
                         onClick={() => handleItemClick('Dashboard')}
                     >
