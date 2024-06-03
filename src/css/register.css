@@ -1,0 +1,55 @@
+
+
+/* ---------------------------------Register Page----------------------------------------- */
+
+.App {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .register-page-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+  
+.register-form {
+display: inline-block;
+text-align: left;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 10px;
+background-color: #f9f9f9;
+}
+  
+  .register-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .register-form div {
+    margin-bottom: 10px;
+  }
+  
+  .register-form label {
+    margin-right: 10px;
+  }
+  
+  .register-form input {
+    padding: 5px;
+    width: 200px;
+  }
+  
+  .register-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .register-form button:hover {
+    background-color: #0056b3;
+  }
